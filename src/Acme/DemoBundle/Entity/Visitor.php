@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
 
  * @ORM\Entity
- * @ORM\Table(name="mediaphragm_visitors")
+ * @ORM\Table(name="mediaphragm_visitor")
  */
 class Visitor extends BaseVisitor
 {
@@ -19,11 +19,6 @@ class Visitor extends BaseVisitor
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
-    public function __construct()
-    {
-        parent::construct();
-    }
 
     /**
      * Get id

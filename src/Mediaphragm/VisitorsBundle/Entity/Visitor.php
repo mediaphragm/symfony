@@ -13,5 +13,4 @@ use Mediaphragm\VisitorsBundle\Model\Visitor as AbstractVisitor;
 
 abstract class Visitor extends AbstractVisitor
 {
-    
 }

@@ -59,3 +59,8 @@ jms_security_extra:
     secure_all_services: false
 
 mediaphragm_visitors: ~
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb'
+    firewall_name: main
+    user_class: Acme\DemoBundle\Entity\User
