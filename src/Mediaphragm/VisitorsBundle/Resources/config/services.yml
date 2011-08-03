@@ -1,0 +1,13 @@
+parameters:
+  mediaphragm_visitors.class: Mediaphragm\VisitorsBundle\Listener\ControllerListener
+  mediaphragm_visitors.enable: true
+#    mediaphragm_visitors.example.class: Mediaphragm\VisitorsBundle\Example
+
+services:
+  mediaphragm_visitors.listener:
+    class: %mediaphragm_visitors.class%
+    arguments: [%mediaphragm_visitors.enable%, @request, @session]
+    scope: request
+    tags:
+      - { name: kernel.event_listener, event: kernel.controller, method: handle }
+
